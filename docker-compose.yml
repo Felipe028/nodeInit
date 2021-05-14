@@ -1,0 +1,12 @@
+version: '3'
+services:
+  api-notificacao-prod:
+    container_name: api-notificacao-prod
+    restart: always
+    image: 'cityofsurrey/node-oracle:14'
+    working_dir: "/app"
+    ports:
+      - 8888:3000
+    volumes:
+      - "./:/app"
+    tty: true
